@@ -14,8 +14,11 @@
        All values will be formatted to show a dollar sign and 2 digits after the decimal point.
  Outputs a goodbye message.
   CIT 260 - 02
-   Autor@ Daniel Penha
+   Author@ Daniel Penha
 */
 
 public class W02dot2 {
+    public static void main(String[] args){
+        System.out.println('A');
+    }
 }

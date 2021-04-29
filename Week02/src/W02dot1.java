@@ -9,7 +9,7 @@
  Outputs the Celsius temperature and the Fahrenheit temperature, with 2 digits after the decimal point.
  Outputs a goodbye message.
   CIT 260 - 02
-  Autor@ Daniel Penha* /
+  Author@ Daniel Penha* /
 */
 
 public class W02dot1 {
