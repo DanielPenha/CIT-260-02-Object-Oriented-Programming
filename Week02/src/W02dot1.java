@@ -10,10 +10,23 @@
  Outputs a goodbye message.
   CIT 260 - 02
   Author@ Daniel Penha* /
+  * font textbook: 2.11 Evaluating Expressions and Operator Precedence
 */
+
+import java.util.Scanner;
 
 public class W02dot1 {
     public static void main(String[] args){
-        System.out.println("Daniel!");
+        //Get data from keyboard
+        Scanner input = new Scanner(System.in);
+        // Type a tempeture Fahrenhit
+        System.out.println("Enter a degree in Fahrenhit: ");
+        double fahrenheit = input.nextDouble();
+
+        //Formula of corvation Fahrenhit to Celsius
+        double celsius = (5.0 / 9) * (fahrenheit - 32);
+
+        //Show the results
+        System.out.println("Fahrenheit " + fahrenheit + " is " + celsius + " in Celsius");
     }
 }

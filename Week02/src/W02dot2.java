@@ -15,10 +15,20 @@
  Outputs a goodbye message.
   CIT 260 - 02
    Author@ Daniel Penha
+   * font textbook: 2.15 Numeric Type Conversions
 */
+
+import java.util.Scanner;
 
 public class W02dot2 {
     public static void main(String[] args){
-        System.out.println('A');
+        //My code here!
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter purchase amoutn: ");
+        double purchaseAmount = input.nextDouble();
+
+        double tax = purchaseAmount * 0.06;
+        System.out.println("Sales tax is $" + (int)(tax * 100) / 100);
     }
 }
