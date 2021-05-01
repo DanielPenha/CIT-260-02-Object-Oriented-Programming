@@ -32,7 +32,7 @@ public class W02dot1 {
         double tempFahrenheit = (9 / 5.0) * tempCelsius + 32;
         //5) Outputs the Celsius temperature and the Fahrenheit temperature, with 2 digits after the decimal point.
         //Show the results
-        System.out.print( tempCelsius + " degrees Celsius is equal to " + tempFahrenheit + " degrees Fahrenheit");
+        System.out.println( tempCelsius + " degrees Celsius is equal to " + tempFahrenheit + " degrees Fahrenheit");
         //6) Outputs a goodbye message.
         System.out.println("Goodbye!");
     }

@@ -26,7 +26,7 @@ public class W02dot2 {
         //1) Tells the user what the program does.
         System.out.println("Given the price of a meal and a percentage to use for the tip, this program calculates the tip, the tax, and the total amount of the bill.");
         //2) Prompts the user to enter a value for the cost of their meal.
-        System.out.println("Enter the cost of the meal: ");
+        System.out.print("Enter the cost of the meal: ");
         //3) Gets the user's input and saves it in a variable declared as a double.
         //--Scanner costMeal = new Scanner(System.in);
         Scanner input = new Scanner(System.in);
@@ -45,15 +45,15 @@ public class W02dot2 {
         double valueTip = (costMeal * tipPerc);
 
         //7) Calculates the tax on the meal. The tax rate is 3.2%.
-        double MealTax = (costMeal * (3.2 / 100.0));
+        double MealTax = (costMeal * (3.2 / 100));
 
         //8) Calculates the total bill = meal cost + tip + tax.
         double totalBill = (costMeal + valueTip + MealTax);
 
         //9) Outputs the tip, the tax, and the total value of the bill. * All values will be formatted to show a dollar sign and 2 digits after the decimal point.
-        System.out.println("The tip is: $" + valueTip);
-        System.out.println("The tax is: $" + MealTax);
-        System.out.println("The total bill is: $" + totalBill);
+        System.out.println( "The tip is: $" + String.format("%.2f",valueTip) );
+        System.out.println("The tax is: $" + String.format("%.2f", MealTax) );
+        System.out.println("The total bill is: $" + String.format("%.2f", totalBill) );
 
         //10) Outputs a goodbye message.
         System.out.println("Goodbye!");
