@@ -23,6 +23,8 @@ import java.util.Scanner;
 public class W02dot2 {
     public static void main(String[] args){
         //My code here!
+        //1)Tells the user what the program does.
+        System.out.println("here");
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter purchase amoutn: ");
