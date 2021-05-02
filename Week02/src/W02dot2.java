@@ -30,6 +30,10 @@ public class W02dot2 {
         Currency correntLocate = Currency.getInstance(Locale.getDefault());
         //Test code:
         // +++System.out.println(correntLocate.getSymbol());
+        //font for help: https://howtodoinjava.com/java/date-time/how-to-get-current-user-locale-in-java/
+        //https://www.javatpoint.com/post/java-currency-getinstance-method#:~:text=The%20getInstance(Locale%20locale)%20is,result%20may%20vary%20over%20time.
+        //https://www.tutorialspoint.com/java/util/currency_getinstance.htm
+        //http://www.avajava.com/tutorials/lessons/how-do-i-display-the-currency-for-a-locale.html
         //1) Tells the user what the program does.
         System.out.println("Given the price of a meal and a percentage to use for the tip, this program calculates the tip, the tax, and the total amount of the bill.");
         //2) Prompts the user to enter a value for the cost of their meal.
