@@ -47,7 +47,7 @@ public class W03dot1 {
         Scanner input = new Scanner(System.in);
         int dayOfTheWeek = input.nextInt();
 
-        //**************Condition
+        //************** statement
         if (dayOfTheWeek < 0 || dayOfTheWeek > 6){
             System.out.println( dayOfTheWeek + " You must enter a number between 0 and 6, \n where 0 is Sunday and 6 is Saturday");
             System.exit(1);
@@ -59,7 +59,7 @@ public class W03dot1 {
         //5) Gets the user's input and saves it. If the value is negative, tell the user the input is invalid and terminate the program.
         int daysInTheFuture = input.nextInt();
 
-        //**************Condition
+        //************** statement
         if (daysInTheFuture < 0){
             System.out.println( daysInTheFuture + " is invalid. You must enter a positive number.");
             System.exit(1);
@@ -68,7 +68,7 @@ public class W03dot1 {
         //6) Calculates the day of the week for the future day.
         int futureDay;
 
-        //*************Condition
+        //************* statement
         if ( daysInTheFuture + dayOfTheWeek < 7 ){
             futureDay = daysInTheFuture + dayOfTheWeek;
         }
