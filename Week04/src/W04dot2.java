@@ -36,5 +36,54 @@ CIT 260 - 02
 Author@ Daniel Penha
 */
 
+import java.util.Scanner;
+
 public class W04dot2 {
+    public static void main(String[] args) {
+        //1) Tells the user what the program does.
+        System.out.println("Given your name, hours worked, and hourly wage, this program calculates your \n" +
+                "   gross pay, state withholding tax, federal withholding tax, and your net pay.\n" +
+                "   It then displays your pay stub.");
+        //2) Prompts the user to enter their first and last name.
+        System.out.println("Enter your first and last name: ");
+
+        //3) Gets the user's input and saves it as a String.
+        Scanner input = new Scanner(System.in);
+        // --String userName =
+
+        //4) Prompts the user to enter the number of hours they worked this week.
+        System.out.println("Enter the hours you worked this week: ");
+
+        //5) Gets the user's input and saves it.
+        int hourWork = input.nextInt();
+
+        //6) Prompts the user to enter their hourly wage.
+        System.out.println("Enter your hourly wage: ");
+
+        //7) Get's the user's input and saves it.
+        int hourWage = input.nextInt();
+
+        //8) Calculates the state withholding tax (9%) and the federal withholding tax (20%).
+        // Calculation State 9%
+
+        // Calculation Federal 20%
+
+
+        //9) Calculates the gross pay and the net pay after subtracting the withholding taxes.
+        // Calculate Gross
+
+        // Calculate Net Pay
+
+        //10) Outputs a pay statement as shown in the example below.
+        System.out.println("Pay Stub for ");
+        System.out.println("Hours Worked: ");
+        System.out.println("Hourly Wage: ");
+        System.out.println("Gross Pay: ");
+        System.out.println("State Tax Withheld: ");
+        System.out.println("Federal Tax Withheld: ");
+        System.out.println("Net Pay: ");
+
+        //11) Outputs a goodbye message.
+        System.out.println("Goodbye");
+    }
 }
