@@ -49,19 +49,19 @@ public class W04dot2 {
 
         //3) Gets the user's input and saves it as a String.
         Scanner input = new Scanner(System.in);
-        // --String userName =
+        String userName = input.nextLine();
 
         //4) Prompts the user to enter the number of hours they worked this week.
         System.out.println("Enter the hours you worked this week: ");
 
         //5) Gets the user's input and saves it.
-        int hourWork = input.nextInt();
+        double hourWork = input.nextDouble();
 
         //6) Prompts the user to enter their hourly wage.
         System.out.println("Enter your hourly wage: ");
 
         //7) Get's the user's input and saves it.
-        int hourWage = input.nextInt();
+        double hourWage = input.nextDouble();
 
         //8) Calculates the state withholding tax (9%) and the federal withholding tax (20%).
         // Calculation State 9%
