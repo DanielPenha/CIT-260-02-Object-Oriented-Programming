@@ -42,7 +42,9 @@ public class W04dot1 {
         //Verify the correct value
         int valueHexadecimal = input.nextInt();
         // Condition
-        //-- if ( valueHexadecimal != ?){??? }
+        //-- if ( valueHexadecimal != ?){???
+        // System.exit(1);
+        // }
 
 
         //4) Converts the hexadecimal digit into a four digit binary number. You may not use any of the conversion methods built into Java, such as toBinaryString( ), to do this.
