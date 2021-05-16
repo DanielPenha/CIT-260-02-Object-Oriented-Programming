@@ -88,13 +88,13 @@ public class W04dot2 {
 
         //10) Outputs a pay statement.
         System.out.println("Pay Stub for " + userName);
-        System.out.println("Hours Worked: " + hourWork);
-        Currency correntLocate = Currency.getInstance(Locale.getDefault());
-        System.out.println("Hourly Wage: "+ correntLocate.getSymbol()  + String.format("%.2f", hourWage) );
-        System.out.println("Gross Pay: "+ correntLocate.getSymbol()  + String.format("%.2f", grossPay) );
-        System.out.println("State Tax Withheld: " +correntLocate.getSymbol()  + String.format("%.2f", stateTax) );
-        System.out.println("Federal Tax Withheld: "+ correntLocate.getSymbol()  + String.format("%.2f", federalTax) );
-        System.out.println("Net Pay: " + correntLocate.getSymbol()  + String.format("%.2f",netPay) );
+        System.out.println("Hours Worked: " + (int) hourWork);
+        Currency currentLocation = Currency.getInstance(Locale.getDefault());
+        System.out.println("Hourly Wage: "+ currentLocation.getSymbol()  + String.format("%.2f", hourWage) );
+        System.out.println("Gross Pay: "+ currentLocation.getSymbol()  + String.format("%.2f", grossPay) );
+        System.out.println("State Tax Withheld: " + currentLocation.getSymbol()  + String.format("%.2f", stateTax) );
+        System.out.println("Federal Tax Withheld: "+ currentLocation.getSymbol()  + String.format("%.2f", federalTax) );
+        System.out.println("Net Pay: " + currentLocation.getSymbol()  + String.format("%.2f",netPay) );
 
         //11) Outputs a goodbye message.
         System.out.println("Goodbye");
