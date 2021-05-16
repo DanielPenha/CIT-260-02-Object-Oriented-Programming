@@ -32,10 +32,16 @@ Here is an example of what your program should look like when it runs (user inpu
 
    Goodbye.
 ---------------
+ Extra information by author:
+  //How Do You Calculate Gross Pay?
+        //Hourly gross pay is calculated by multiplying the number of hours worked in the pay period times the hourly pay rate. Hours worked may include waiting time, on-call time, rest and meal breaks, travel time, overtime, and training sessions. Gross pay for salaried employees is calculated by dividing the total annual pay for that employee by the number of pay periods in a year.  https://www.thebalancesmb.com/what-is-gross-pay-and-how-is-it-calculated-398696
+
 CIT 260 - 02
 Author@ Daniel Penha
 */
 
+import java.util.Currency;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class W04dot2 {
@@ -64,24 +70,31 @@ public class W04dot2 {
         double hourWage = input.nextDouble();
 
         //8) Calculates the state withholding tax (9%) and the federal withholding tax (20%).
+        // Variables
+        double stateTax, federalTax, grossPay , netPay;
         // Calculation State 9%
+        stateTax =  (hourWage * hourWage) * 0.09;
 
         // Calculation Federal 20%
-
+        federalTax = (hourWage * hourWage) * 0.20;
 
         //9) Calculates the gross pay and the net pay after subtracting the withholding taxes.
         // Calculate Gross
+        // multiplying the number of hours worked in the pay period times the hourly pay rate
+        grossPay = hourWork * hourWage;
 
         // Calculate Net Pay
+        netPay = (hourWage * hourWage) - stateTax - federalTax;
 
-        //10) Outputs a pay statement as shown in the example below.
-        System.out.println("Pay Stub for ");
-        System.out.println("Hours Worked: ");
-        System.out.println("Hourly Wage: ");
-        System.out.println("Gross Pay: ");
-        System.out.println("State Tax Withheld: ");
-        System.out.println("Federal Tax Withheld: ");
-        System.out.println("Net Pay: ");
+        //10) Outputs a pay statement.
+        System.out.println("Pay Stub for " + userName);
+        System.out.println("Hours Worked: " + hourWork);
+        Currency correntLocate = Currency.getInstance(Locale.getDefault());
+        System.out.println("Hourly Wage: "+ correntLocate.getSymbol()  + String.format("%.2f", hourWage) );
+        System.out.println("Gross Pay: "+ correntLocate.getSymbol()  + String.format("%.2f", grossPay) );
+        System.out.println("State Tax Withheld: " +correntLocate.getSymbol()  + String.format("%.2f", stateTax) );
+        System.out.println("Federal Tax Withheld: "+ correntLocate.getSymbol()  + String.format("%.2f", federalTax) );
+        System.out.println("Net Pay: " + correntLocate.getSymbol()  + String.format("%.2f",netPay) );
 
         //11) Outputs a goodbye message.
         System.out.println("Goodbye");

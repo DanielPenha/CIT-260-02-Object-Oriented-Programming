@@ -23,6 +23,10 @@ Here are some examples of what your program should look like when it runs (user 
    G is not a valid hexadecimal digit.
    Goodbye.
 -------------
+    Research  material font:
+    On step 3) https://www.youtube.com/watch?v=wjcP_iTXyuY & textbook
+    Example: https://www.w3resource.com/java-exercises/basic/java-basic-exercise-29.php
+
 CIT 260 - 02
 Author@ Daniel Penha
 
@@ -40,19 +44,26 @@ public class W04dot1 {
         //3) Gets the user's input and saves it. If the value is not a valid hexadecimal digit tell the user and terminate the program.
         Scanner input = new Scanner(System.in);
         //Verify the correct value
-        int valueHexadecimal = input.nextInt();
+        char valueHexadecimal = input.next().charAt(0);
         // Condition
-        //-- if ( valueHexadecimal != ?){???
-        // System.exit(1);
-        // }
-
+        if (valueHexadecimal >= 'A' && valueHexadecimal <= 'F')
+            System.out.println(valueHexadecimal + " Is a valid hexadecimal digit.");
+        else if (valueHexadecimal >= 'a' && valueHexadecimal <= 'f')
+            System.out.println(valueHexadecimal + " Is a valid hexadecimal digit.");
+        else if (valueHexadecimal >= '0' && valueHexadecimal <= '9')
+            System.out.println(valueHexadecimal + " Is a valid hexadecimal digit.");
+        else {
+            System.out.println( valueHexadecimal + " Is not a valid hexadecimal digit.");
+            System.out.println("Goodbye");
+            System.exit(1);
+        }
 
         //4) Converts the hexadecimal digit into a four digit binary number. You may not use any of the conversion methods built into Java, such as toBinaryString( ), to do this.
         // Conversion
+        //System.out.println((int)valueHexadecimal);
 
         //5) Outputs the four digit binary number, including any leading zeros.
         // Condition Print
-        // -- if (valueHexadecimal){}
 
         //6) Outputs a goodbye message.
         System.out.println("Goodbye");
