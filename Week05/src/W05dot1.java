@@ -20,4 +20,29 @@ Author@ Daniel Penha
         */
 
 public class W05dot1 {
+    public static void main(String[] args) {
+        //1) Tells the user what the program does.
+        System.out.println("This Program displays a table of kilogram to ponds conversions.\n");
+
+        //2) Uses a loop to calculate pounds per kilogram (1 kilogram = 2.2 pounds) and display the following table.
+        //Table top
+        System.out.printf("%-10s   %-10s\n", "Kilogram", "Pounds");
+
+        //Table spacer
+        System.out.printf("%-10s   %-10s\n", "--------" , "------");
+
+        //Loop i == Kilogram
+        for (int i = 1 ; i <= 15; i= i+2){
+
+            //Calculate Pounds per Kilogram
+            double pounds = i * 2.2;
+
+            //System.out.println(kilogram);
+            System.out.printf("%-10s   %-10.1f\n", i , pounds);
+
+        }
+
+        //3) Outputs a goodbye message.
+        System.out.println("\nGoodbye");
+    }
 }
