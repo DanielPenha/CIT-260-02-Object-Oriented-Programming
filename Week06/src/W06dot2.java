@@ -30,11 +30,31 @@
 public class W06dot2 {
     public static void main(String[] args) {
         //1) Tell the user what the program does.
-        System.out.println("cccccc");
+        System.out.println("This program shows you an table of Celsius and Fahrenheit");
 
-        //2) Invoke the above two methods to compute and display the table shown below
+        //2) Invoke two methods to compute and display the table shown below
+        double celsius = 40;
+        double fahrenheit = 120;
+        System.out.println("--------------------------------------------------------");
+        System.out.printf("%-10s   %-10s   |     %-10s   %-10s\n", "Celsius","Fahrenheit", "Fahrenheit", "Celsius");
+        System.out.println("--------------------------------------------------------");
+
+        for (int i = 1; i <= 10; i++){
+            //System.out.println(celsius--);
+            //System.out.println(fahrenheit);
+            System.out.printf("%-10s   %-10s   |     %-10s   %-10.2f\n",celsius,celsiusToFahrenheit(celsius) , fahrenheit, fahrenheitToCelsius(fahrenheit));
+            celsius--;
+            fahrenheit -= 10;
+        }
 
         //3) Output a goodbye message.
-        System.out.println("Goodbye");
+        System.out.println("\nGoodbye");
+}
+    public static double celsiusToFahrenheit(double tempCelsius){
+        return (tempCelsius * 9.0 / 5.0 )  + 32;
+    }
+
+    public static double fahrenheitToCelsius(double tempFahrenheit){
+        return (tempFahrenheit - 32) * (5.0 / 9) ;
     }
 }
