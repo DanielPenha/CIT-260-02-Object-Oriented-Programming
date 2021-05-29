@@ -103,7 +103,7 @@ public class W06dot1 {
     //**  The method header for your method should look like this:
     //public static double futureValue(double investmentAmount, double monthlyInterestRate, int years)*/
     public static double futureValue(double investmentAmount, double annualInterestRate, int years){
-        double futureValue = investmentAmount * Math.pow((1 + annualInterestRate/100.0), years);
+        double futureValue = investmentAmount * Math.pow((1 + ((annualInterestRate/100)/12)), (years*12));
 
         return futureValue;
     }

@@ -29,6 +29,12 @@
  * */
 public class W06dot2 {
     public static void main(String[] args) {
+        //1) Tell the user what the program does.
+        System.out.println("cccccc");
 
+        //2) Invoke the above two methods to compute and display the table shown below
+
+        //3) Output a goodbye message.
+        System.out.println("Goodbye");
     }
 }
