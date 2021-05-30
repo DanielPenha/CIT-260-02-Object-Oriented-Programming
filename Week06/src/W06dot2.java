@@ -49,11 +49,21 @@ public class W06dot2 {
 
         //3) Output a goodbye message.
         System.out.println("\nGoodbye");
-}
+    }
+    /**
+     * Mathematical conversion celsius to Fahrenheit
+     * @param    tempCelsius the temperature in Celsius
+     * @return   the temperature in Fahrenheit
+     */
     public static double celsiusToFahrenheit(double tempCelsius){
         return (tempCelsius * 9.0 / 5.0 )  + 32;
     }
 
+    /**
+     * Mathematical conversion Fahrenheit to celsius
+     * @param    tempFahrenheit the temperature in Fahrenheit
+     * @return   the temperature in Celsius
+     */
     public static double fahrenheitToCelsius(double tempFahrenheit){
         return (tempFahrenheit - 32) * (5.0 / 9) ;
     }

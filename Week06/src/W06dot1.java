@@ -102,6 +102,11 @@ public class W06dot1 {
     //     futureValue = investmentAmount x (1 + monthlyInterestRate)numberOfYears * 12
     //**  The method header for your method should look like this:
     //public static double futureValue(double investmentAmount, double monthlyInterestRate, int years)*/
+    /**
+     * A mathematics method for future value
+     * @param    investmentAmount, annualInterestRate, years
+     * @return   The future value of a value
+     */
     public static double futureValue(double investmentAmount, double annualInterestRate, int years){
         double futureValue = investmentAmount * Math.pow((1 + ((annualInterestRate/100)/12)), (years*12));
 
