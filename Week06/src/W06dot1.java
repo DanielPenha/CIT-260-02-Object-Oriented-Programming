@@ -47,7 +47,7 @@ import java.util.Scanner;
 public class W06dot1 {
     public static void main(String[] args) {
 
-        Currency correntLocate = Currency.getInstance(Locale.getDefault());
+        Currency currentLocate = Currency.getInstance(Locale.getDefault());
         //1) Tells the user what the program does.
         System.out.println("Given an investment amount and an annual interest rate, this program \n" +
                 "will calculate the future value of the investment for a period of\n" +
@@ -91,7 +91,7 @@ public class W06dot1 {
 
         for (int year = 1; year <=10 ; year++) {
             double futureValue = futureValue(investmentAmount, annualInterestRate, year);
-            System.out.printf("%6s     "+correntLocate.getSymbol()+"%.2f\n" , year , futureValue);
+            System.out.printf("%6s     "+currentLocate.getSymbol()+"%.2f\n" , year , futureValue);
         }
 
         //Say goodbye
@@ -108,8 +108,7 @@ public class W06dot1 {
      * @return   The future value of a value
      */
     public static double futureValue(double investmentAmount, double annualInterestRate, int years){
-        double futureValue = investmentAmount * Math.pow((1 + ((annualInterestRate/100)/12)), (years*12));
 
-        return futureValue;
+        return investmentAmount * Math.pow((1 + ((annualInterestRate/100)/12)), (years*12));
     }
 }
