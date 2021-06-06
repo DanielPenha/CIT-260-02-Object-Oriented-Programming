@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**W07 Assignment: Program 7.2
  Consider the following table of timecard data for a set of hourly workers:
 
@@ -52,21 +54,27 @@ public class W07dot2 {
         //1) Tells the user what the program does. Note that no user input is required for this program.
         System.out.println("This Program computes the number of hours worked for a set of hourly employees.\n");
         //2) Creates a one-dimensional array of Strings and stores the employee names from the above table in that array.
-        String[] employeeNames = { "Tara Teamlead" , "Harry Hacker" , "Carl Coder" , "Paula Programmer" , "Darrin Debugger"};
-        double[][] distances = {
-                {0, 983, 787, 714, 1375, 967, 1087},
-                {983, 0, 214, 1102, 1763, 1723, 1842},
-                {787, 214, 0, 888, 1549, 1548, 1627},
-                {714, 1102, 888, 0, 661, 781, 810},
-                {1375, 1763, 1549, 661, 0, 1426, 1187},
-                {967, 1723, 1548, 781, 1426, 0, 239},
-                {1087, 1842, 1627, 810, 1187, 239, 0},
-        };
+       String[] employeeNames = { "Tara Teamlead" , "Harry Hacker" , "Carl Coder" , "Paula Programmer" , "Darrin Debugger"};
 
         //3) Creates a two-dimensional array and stores the hourly data from the table above in that array.
+        double[][] hourly  = {
+                {0.0 , 8.0 , 8.0 , 8.5 , 8.0 , 9.0 , 0.0},
+                {0.0 , 9.0 , 9.0 , 8.5 , 8.0 , 7.5 , 0.0},
+                {0.0 , 8.5 , 8.0 , 8.6 , 8.6 , 9.5 , 2.0},
+                {0.0 , 4.75 , 6.0 , 6.25 , 6.5 , 0.0 , 0.0},
+                {0.0 , 0.0 , 0.0 , 0.0 , 5.25 , 5.25 , 6.0},
+        };
         //4) Adds up the number of hours for each employee and stores the results in a one-dimensional array.
+        //https://stackoverflow.com/questions/67799104/how-do-i-get-the-sums-of-the-rows-of-a-2d-array-relative-to-the-elements-of-a-1d
         //5) Displays the names and hours worked for that week as shown in the example below.
+        System.out.printf("%-18s      %10s\n", "Employee Name", "Total Hours");
+        for (int i = 0 ; i < employeeNames.length ; i++){
+            //System.out.println(employeeNames[i]);
+            System.out.printf("%-18s      %-10.2f",employeeNames[i], Arrays.stream(hourly[i]).sum());
+            System.out.println();
+        }
+
         //6) Displays a goodbye message.
-        System.out.println("Goodbye");
+        System.out.println("\nGoodbye");
     }
 }
