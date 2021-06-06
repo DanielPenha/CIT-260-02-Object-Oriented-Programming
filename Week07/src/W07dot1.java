@@ -68,11 +68,12 @@ public class W07dot1 {
         //5) Displays the mean and the standard deviation with 2 digits after the decimal point.
         // Display the mean
         //System.out.println("The mean of this set of numbers is " + sum/fiveNumbers.length);
-        System.out.println("The mean of this set of numbers is " + mean);
-        //System.out.printf("The mean of this set of numbers is %.2f" + mean);
+        //System.out.println("The mean of this set of numbers is " + mean);
+        System.out.printf("The mean of this set of numbers is %.2f\n", mean);
 
         // Display the standard deviation
-        System.out.println("The standard deviation is " + SD);
+        //System.out.println("The standard deviation is " + SD);
+        System.out.printf("The standard deviation is %.2f\n" , SD);
 
         //6) Displays a goodbye message.
         System.out.println("Goodbye ...");
