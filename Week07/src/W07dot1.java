@@ -40,60 +40,79 @@ import java.util.Scanner;
  The mean of this set of numbers is 5.42
  The standard deviation is 1.65
  Goodbye ...
+
  CIT 260 - 02
  Author@ Daniel Penha
+
  */
 public class W07dot1 {
     public static void main(String[] args) {
         //1) Tells the use what the program does.
-        System.out.println("This program calculates the average of five numbers.");
+        System.out.println("This program calculates the Mean and the Standard Deviation of five numbers.\n");
 
         //2) Prompts the user to enter five numbers.
         Scanner input = new Scanner(System.in);
+        double[] fiveNumbers = new double[5];
+        double sum = 0.0;
 
-        //3) Saves the user's input in an array of doubles.
-        double[] fiveNumber = new double[5];
-        double average = 0;
 
-        for (int i = 0 ; i < 5 ; i++){
-            System.out.println("Please enter a number: ");
-            fiveNumber[i] = input.nextDouble();
+        for (int i = 0 ; i < fiveNumbers.length ; i++){
+            System.out.println("Enter a number: ");
+            //3) Saves the user's input in an array of doubles.
+            fiveNumbers[i] = input.nextDouble();
+            sum += fiveNumbers[i];
         }
-        //4) Uses the methods above to compute the mean and the standard deviation for the numbers in the array.
+        double mean = mean(fiveNumbers);
+        double SD = calculateSD(fiveNumbers);
 
         //5) Displays the mean and the standard deviation with 2 digits after the decimal point.
-        //Mean
-        System.out.printf("The mean of this set of numbers is %.2f\n", "mean" );
+        // Display the mean
+        //System.out.println("The mean of this set of numbers is " + sum/fiveNumbers.length);
+        System.out.println("The mean of this set of numbers is " + mean);
+        //System.out.printf("The mean of this set of numbers is %.2f" + mean);
 
-        //Standard Diviation
-        System.out.printf("The standard deviation is %.2f\n" , "deviation" );
+        // Display the standard deviation
+        System.out.println("The standard deviation is " + SD);
 
         //6) Displays a goodbye message.
-        System.out.println("\nGoodbye ...");
-
+        System.out.println("Goodbye ...");
     }
-    //7) Your file should have the proper file prologue, and each method should have the proper method prologue.
+
+    //4) Uses the methods to compute the mean and the standard deviation
+    // for the numbers in the array.
+
+    //https://www.programiz.com/java-programming/examples/average-arrays
     /**
      * Computes and returns the mean value for an array of doubles
-     * @param    m mean value for an array
+     * @param    fiveNumbers mean value for an array
      * @return   the mean value for an array of doubles
      */
-    //Research to get the mean: https://stackoverflow.com/questions/4191687/how-to-calculate-mean-median-mode-and-range-from-a-set-of-numbers
-    public static double mean(double[] m) {
-        double sum = 0;
-        for (int i = 0 ; i < m.length; i++){
-            sum += m[i];
+    // The mean is simply the average of the numbers.
+    public static double mean(double[] fiveNumbers){
+        double sum = 0.0 , mean = 0.0;
+        for (double num: fiveNumbers){
+            sum += num;
         }
-        return sum / m.length;
-
+        return mean = sum/fiveNumbers.length;
     }
-
+    // The standard deviation is a statistic that tells you how tightly all the various
+    // data are clustered around the mean in a set of data
     /**
      * Computes and returns the standard deviation for a sample population
-     *
-     * @param divided the standard deviation
+     * @param fiveNumbers the standard deviation
      * @return the temperature in Celsius
      */
-
-    //  }
+    //https://www.programiz.com/java-programming/examples/standard-deviation
+    public static double calculateSD(double[] fiveNumbers){
+        double sum = 0.0 , standardDeviation = 0.0;
+        int length = fiveNumbers.length;
+        for (double num: fiveNumbers){
+            sum += num;
+        }
+        double mean = sum/length;
+        for (double num: fiveNumbers){
+            standardDeviation += Math.pow(num - mean,2);
+        }
+        return Math.sqrt(standardDeviation/length);
+        }
 }
