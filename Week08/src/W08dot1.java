@@ -12,7 +12,7 @@
 
  Tells the user what the program does.
  Creates two Rectangle objects, the first with a height of 4 and a width of 40, the second with a height of 3.5 and a width of 5.
- Call the methods in your Rectangle class to output the width, height, area, and perimeter of each rectangle, with 2 digits after the decimal point.
+ Call the methods in your Rectangle class to output the width, height, area, and per0imeter of each rectangle, with 2 digits after the decimal point.
  Output a goodbye message.
  The following example illustrates what your program should look like when it runs.
 
@@ -37,6 +37,19 @@
 
 public class W08dot1 {
     public static void main(String[] args) {
-        System.out.println("Hello Would");
+        System.out.println("This program creates two rectangle objects and displays their width, height, area and perimeter. ");
+
+        Rectangle rectangle1 = new Rectangle(4, 40);
+        Rectangle rectangle2 = new Rectangle(3.5, 5);
+
+        System.out.println("Rectangle 1");
+        System.out.println("height: " + rectangle1.getHeight());
+        System.out.println("width: " + rectangle1.getWidth());
+        System.out.println("area: " + rectangle1.getArea());
+        System.out.println("perimeter: " + rectangle1.getPerimeter());
+
+
     }
+
+
 }
