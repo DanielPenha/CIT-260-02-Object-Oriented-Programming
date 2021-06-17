@@ -69,6 +69,12 @@
 
 public class W09dot1 {
     public static void main(String[] args) {
+        //Attributes
+        // GETTERS & SETTERS
+        // Constructor
+        //Methods
+
         System.out.println("oi");
+
     }
 }
