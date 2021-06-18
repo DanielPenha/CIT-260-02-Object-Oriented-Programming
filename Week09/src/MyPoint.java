@@ -69,6 +69,7 @@ public class MyPoint {
     //5) A member method named distance that calculates and returns the distance
     // between this MyPoint object and another point that is specified
     // by its x- and y-coordinates. The method header looks like this:
+    //https://javatutoring.com/distance-between-two-points-java-program/
     // Methods
     /**
      * Returns the distance between this MyPoint object and another point
