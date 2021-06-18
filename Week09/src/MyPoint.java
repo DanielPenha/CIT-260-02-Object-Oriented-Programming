@@ -39,7 +39,7 @@ public class MyPoint {
     // GETTERS & SETTERS
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(double x) {
@@ -47,7 +47,7 @@ public class MyPoint {
     }
 
     public double getY() {
-        return y;
+        return this.y;
     }
 
     public void setY(double y) {
@@ -75,7 +75,7 @@ public class MyPoint {
      * @return distance
      */
     public double distance(int xCoord, int yCoord){
-        return y - x;
+        return Math.sqrt((xCoord- this.x)*(xCoord-this.x) + (yCoord-this.y)*(yCoord-this.y));
     }
 
     //6) A member method named distance that calculates and returns the distance
@@ -86,7 +86,7 @@ public class MyPoint {
      * @return distance
      */
     public double distance(MyPoint p){
-        return y - x;
+        return Math.sqrt((p.x- this.x)*(p.x-this.x) + (p.y-this.y)*(p.y-this.y));
     }
 
     //7) A static method named distance that takes two objects of the MyPoint class
@@ -97,6 +97,6 @@ public class MyPoint {
      * @return distance
      */
     public static double distance (MyPoint mp1, MyPoint mp2){
-        return mp2 - mp1;
+        return Math.sqrt((mp2.x - mp1.x)*(mp2.x - mp1.x) + (mp2.y - mp1.y)*(mp2.y - mp1.y));
     }
 }
