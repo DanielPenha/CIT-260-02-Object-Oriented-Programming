@@ -1,4 +1,4 @@
-/**Objectives
+/*Objectives
  This assignment will give students practice in the following:
 
  Reading data from and writing data to the Console
@@ -79,13 +79,13 @@ public class W09dot1 {
         Scanner input = new Scanner(System.in);
 
         //3) Prompts the user to enter the x and y coordinates of a point.
-        System.out.println("Enter the x coordinate of a point: ");
+        System.out.print("Enter the x coordinate of a point: ");
 
         //4) Saves the users input.
         int xcoordinate = input.nextInt();
 
         //3) Prompts the user to enter the x and y coordinates of a point.
-        System.out.println("Enter the y coordinate of a point:");
+        System.out.print("Enter the y coordinate of a point: ");
 
         //4 Saves the users input.
         int ycoordinate = input.nextInt();
@@ -97,11 +97,11 @@ public class W09dot1 {
 
         MyPoint p2 = new MyPoint(xcoordinate , ycoordinate);
 
-       System.out.printf("Using method 1, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , p2.distance(p1.getX() , p1.getY()));
+       System.out.printf("Using method 1, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , p2.distance( (int) p1.getX()  , (int) p1.getY()));
 
-        System.out.printf("\nUsing method 2, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , p2.distance(p1));
+        System.out.printf("\nUsing method 2, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , p2.distance(p1));
 
-        System.out.printf("\nUsing method 3, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , MyPoint.distance(p1 , p2));
+        System.out.printf("\nUsing method 3, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , MyPoint.distance(p1 , p2));
 
         System.out.println("\nGoodbye...");
 
