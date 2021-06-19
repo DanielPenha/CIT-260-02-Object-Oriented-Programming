@@ -82,26 +82,29 @@ public class W09dot1 {
         System.out.println("Enter the x coordinate of a point: ");
 
         //4) Saves the users input.
-        int xcoord = input.nextInt();
+        int xcoordinate = input.nextInt();
 
         //3) Prompts the user to enter the x and y coordinates of a point.
         System.out.println("Enter the y coordinate of a point:");
 
         //4 Saves the users input.
-        int ycoord = input.nextInt();
+        int ycoordinate = input.nextInt();
 
         //5) Uses the first distance method to calculate and display the distance between
         // the MyPoint object p1 and the point at the x and y coordinates entered by the user.
         // The distance is displayed with two digits after the decimal point.
         MyPoint p1 = new MyPoint();
 
-        MyPoint p2 = new MyPoint(xcoord , ycoord);
+        MyPoint p2 = new MyPoint(xcoordinate , ycoordinate);
 
-        System.out.printf("Using method 1, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , p2.distance(p1.getX() , p1.getY()));
+        System.out.printf("Using method 1, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() ,
+                p2.getX() , p2.getY() , p2.distance(p1.getX() , p1.getY()));
 
-        System.out.printf("Using method 2, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , p2.distance(p1));
+        System.out.printf("Using method 2, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() ,
+                p2.getX() , p2.getY() , p2.distance(p1));
 
-        System.out.printf("Using method 3, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() , p2.getX() , p2.getY() , MyPoint.distance(p1 , p2));
+        System.out.printf("Using method 3, the distance from (%s , %s) to (%s , %s) is %.2f" , p1.getX() , p1.getY() ,
+                p2.getX() , p2.getY() , MyPoint.distance(p1 , p2));
 
         System.out.println("Goodbye...");
 
