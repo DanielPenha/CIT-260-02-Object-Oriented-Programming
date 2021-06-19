@@ -66,13 +66,14 @@
  CIT 260 - 02
  Author@ Daniel Penha
  */
+import java.util.Scanner;
 
 public class W09dot1 {
     public static void main(String[] args) {
         //1) Tells the user what the program does.
         System.out.println("This program creates a point at (0,0) and a point at the coordinates \n" +
-                "entered by you. It then computes and displays the distance from (0,0)\n" +
-                "to the point defined by you, using three different methods.");
+        "entered by you. It then computes and displays the distance from (0,0)\n" +
+        "to the point defined by you, using three different methods.");
 
         //2) Uses the no-arg constructor to create a MyPoint object p1 at (0,0).
         Scanner input = new Scanner(System.in);
