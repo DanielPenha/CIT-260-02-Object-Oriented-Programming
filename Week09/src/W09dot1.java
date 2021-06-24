@@ -95,14 +95,20 @@ public class W09dot1 {
         // The distance is displayed with two digits after the decimal point.
         MyPoint p1 = new MyPoint();
 
+        //6) Uses the parameterized constructor to create a MyPoint object p2 using the x-coordinate
+        // and the y-coordinate entered  by the user.
         MyPoint p2 = new MyPoint(xcoordinate , ycoordinate);
 
+        //7) Uses the second and third distance methods to calculate and display the distance
+        //  between the MyPoint object p1 and the MyPoint object p2.  The distance is displayed
+        //  with two digits after the decimal point.
        System.out.printf("Using method 1, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , p2.distance( (int) p1.getX()  , (int) p1.getY()));
 
         System.out.printf("\nUsing method 2, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , p2.distance(p1));
 
         System.out.printf("\nUsing method 3, the distance from (%s,%s) to (%s,%s) is %.2f" , (int)p1.getX() , (int)p1.getY() , (int)p2.getX() , (int)p2.getY() , MyPoint.distance(p1 , p2));
 
+        //8) Displays a goodbye message.
         System.out.println("\nGoodbye...");
 
     }

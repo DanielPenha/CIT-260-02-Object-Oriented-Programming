@@ -1,4 +1,4 @@
-/**Design a class named MyPoint that represents a point in 2-dimensional space. Your
+/*Design a class named MyPoint that represents a point in 2-dimensional space. Your
  * class should contain the following:
 
  Two data fields x and y, that represent the x-coordinate and the y-coordinate of the point.
@@ -76,7 +76,7 @@ public class MyPoint {
      * @return distance
      */
     public double distance(int xCoord, int yCoord){
-        return Math.sqrt((xCoord- this.x)*(xCoord-this.x) + (yCoord-this.y)*(yCoord-this.y));
+        return Math.sqrt((xCoord - this.x) * (xCoord-this.x) + (yCoord-this.y) * (yCoord - this.y));
     }
 
     //6) A member method named distance that calculates and returns the distance
@@ -87,7 +87,7 @@ public class MyPoint {
      * @return distance
      */
     public double distance(MyPoint p){
-        return Math.sqrt((p.x- this.x)*(p.x-this.x) + (p.y-this.y)*(p.y-this.y));
+        return Math.sqrt((p.x - this.x) * (p.x - this.x) + (p.y - this.y) * (p.y - this.y));
     }
 
     //7) A static method named distance that takes two objects of the MyPoint class
@@ -98,6 +98,6 @@ public class MyPoint {
      * @return distance
      */
     public static double distance (MyPoint mp1, MyPoint mp2){
-        return Math.sqrt((mp2.x - mp1.x)*(mp2.x - mp1.x) + (mp2.y - mp1.y)*(mp2.y - mp1.y));
+        return Math.sqrt((mp2.x - mp1.x) * (mp2.x - mp1.x) + (mp2.y - mp1.y) * (mp2.y - mp1.y));
     }
 }
