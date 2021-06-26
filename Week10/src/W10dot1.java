@@ -111,7 +111,7 @@ public class W10dot1 {
         System.out.println(triangle.toString());
 
         //6) Displays a goodbye message.
-        System.out.println("Goodbye...");
+        System.out.println("\nGoodbye...");
 
     }
 }
