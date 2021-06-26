@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*Objectives
         This assignment will give students practice in the following:
 
@@ -59,6 +57,8 @@ import java.util.Scanner;
         CIT 260 - 02
         Author@ Daniel Penha
         */
+import java.util.Locale;
+import java.util.Scanner;
 public class W10dot1 {
     public static void main(String[] args) {
         //1) Tells the user what the program does.
@@ -78,19 +78,38 @@ public class W10dot1 {
 
         //3) Saves the users input.
         String filled = input.nextLine();
+        boolean boolFilled = false;
 
+        if (filled.toUpperCase().equals("Y") ) {
+            boolFilled = true;
+        }
 
         System.out.println("Enter the non-zero, positive lengths of the three sides of the triangle: ");
 
         //3) Saves the users input.
-        double length = input.nextDouble();
-
+        //double length = input.nextDouble();
+        String sides = input.nextLine();
 
         //4) Using the values entered by the user, creates the Triangle object.
+        String[] lados = sides.split(" ");
+
+        double side1 = Double.parseDouble(lados[0]);
+        double side2 = Double.parseDouble(lados[1]);
+        double side3 = Double.parseDouble(lados[2]);
+
+        Triangle triangle = new Triangle(side1 ,  side2 , side3 ,  color , boolFilled);
+
 
         //5) Displays the string representation of the Triangle object by calling its
         // toString( ) method.
         // Look at the output example below to see what this output should look like.
+        /*Triangle Output:
+        side1 = 3.0, side2 = 4.0, side 3 = 5.0
+        created on Wed May 22 07:34:11 MDT 2019
+        color: red and filled = true
+        Area = 6.00*/
+        System.out.println(triangle.toString());
+
 
 
         //6) Displays a goodbye message.

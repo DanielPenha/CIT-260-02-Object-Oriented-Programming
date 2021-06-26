@@ -37,7 +37,7 @@
 
         */
 
-public class Triangle {
+public class Triangle extends GeometricObject{
     //1) Three data fields side1, side2, and side3 that represent sides of a triangle.
 
     //Attributes
@@ -85,12 +85,35 @@ public class Triangle {
 
     //4) A parameterized constructor that creates a triangle with specified values
     // for side1, side2, and side3, a color, and a filled attribute.
-    public Triangle(double side1 , double side2 , double side3){
+    public Triangle(double side1 , double side2 , double side3 , String color , boolean filled ){
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
+        /*super(color , filled);*/
+        setColor(color);
+        setFilled(filled);
     }
 
-
     //Methods
+
+    //5) A member method named getArea( ) that calculates and returns the area of the triangle.
+    // The formula to compute the area of a Triangle, given three sides is called Heron's formula.
+    // Heron's formula is described in problem 2.19 in the textbook.
+    public double getArea (){
+        double s = ( side1 + side2 + side3 ) / 2;
+        return Math.pow ( s * ( s - side1 ) * ( s - side2 ) * ( s - side3 ), 0.5);
+    }
+
+    //6) A member method named toString( ) that generates a String representation of
+    // the triangle object.
+    // This toString()  method must call GeometricObject's  toString() method to correctly display the
+    // String representation of the Triangle object.
+    public String toString(){
+        return "Triangle Output: \n" +
+                "side1 = " + side1 + " side2 = " + side2 + " side3 = " + side3 + "\n"+
+                "Created on " + getDateCreated() + "\n"+
+                "color: " + super.getColor() + " and filled = " + super.isFilled() + "\n"+
+                "Area = " + this.getArea() ;
+    }
+
 }
