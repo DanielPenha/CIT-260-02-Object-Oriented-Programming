@@ -91,11 +91,11 @@ public class W10dot1 {
         String sides = input.nextLine();
 
         //4) Using the values entered by the user, creates the Triangle object.
-        String[] lados = sides.split(" ");
+        String[] side = sides.split(" ");
 
-        double side1 = Double.parseDouble(lados[0]);
-        double side2 = Double.parseDouble(lados[1]);
-        double side3 = Double.parseDouble(lados[2]);
+        double side1 = Double.parseDouble(side[0]);
+        double side2 = Double.parseDouble(side[1]);
+        double side3 = Double.parseDouble(side[2]);
 
         Triangle triangle = new Triangle(side1 ,  side2 , side3 ,  color , boolFilled);
 
@@ -109,8 +109,6 @@ public class W10dot1 {
         color: red and filled = true
         Area = 6.00*/
         System.out.println(triangle.toString());
-
-
 
         //6) Displays a goodbye message.
         System.out.println("Goodbye...");

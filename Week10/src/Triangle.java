@@ -89,7 +89,6 @@ public class Triangle extends GeometricObject{
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
-        /*super(color , filled);*/
         setColor(color);
         setFilled(filled);
     }
