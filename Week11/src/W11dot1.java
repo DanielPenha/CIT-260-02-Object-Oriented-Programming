@@ -11,6 +11,7 @@ Instructions
         A method named getGrossPay( ) that returns a zero;
         A method named getFedWithholding( ) that returns a zero.
         A method named getStateWithholding( ) that returns a zero.
+
         Design a class named Hourly that inherits from Employee. Your Hourly class should include:
 
         A double, hourlyWage,  that holds this person's hourly wage.

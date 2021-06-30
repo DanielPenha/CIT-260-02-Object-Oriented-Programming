@@ -59,12 +59,18 @@ public class Employee {
 
     // Method
     //6) A method named getGrossPay( ) that returns a zero;
-  /*  public double getGrossPay(){
-        return  this.getGrossPay() = 0;
-    }*/
-
+    public double getGrossPay(){
+        return  0;
+    }
 
     //7) A method named getFedWithholding( ) that returns a zero.
+    public double getFedWithholding(){
+        return 0;
+    }
+
     //8) A method named getStateWithholding( ) that returns a zero.
+    public double getStateWithholding(){
+        return 0;
+    }
 
 }
