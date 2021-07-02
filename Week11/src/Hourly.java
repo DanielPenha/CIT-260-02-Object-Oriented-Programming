@@ -36,6 +36,24 @@ public class Hourly extends Employee {
     // methods from the Employee class.
     // The gross pay for an Hourly employee is calculated as hoursWorked x hourlyWage.
     // Use a state tax rate of 0.07 and a federal tax rate of 0.15.
-    /*@Override
-    public */
+
+    //Override the getGrossPay( )
+    @Override
+    public double getGrossPay(){
+        return this.hoursWorked * this.hourlyWage ;
+    }
+
+    //getFedWithholding( )
+    @Override
+    public double getFedWithholding(){
+        // federalTax = (hourWage * hourWage) * 0.20;
+        return this.getGrossPay() * 0.15;
+    }
+
+    //getStateWithholding( )
+    @Override
+    public double getStateWithholding(){
+        //stateTax =  (hourWage * hourWage) * 0.09;
+        return this.getGrossPay() * 0.07;
+    }
 }

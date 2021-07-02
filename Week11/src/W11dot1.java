@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Instructions
         Design a parent class named Employee. Your Employee class should include:
@@ -85,9 +87,11 @@ public class W11dot1 {
     public static void main(String[] args) {
 
         //1) Tells the user what the program does.
-        System.out.println("Payroll Report");
+        System.out.println("*******tell about it !Payroll Report");
 
         //2) Creates an ArrayList<Employee>.
+        ArrayList<Employee> listEmployees = new ArrayList<>();
+
 
 
         //3) Create instances for the following employees and add them to the ArrayList:
@@ -96,10 +100,37 @@ public class W11dot1 {
         //   * Hourly employee Isabel Intern, serial number 233. Isabel earns $12.50 and
         //   hour and works 20 hours a week.
         //   * Salaried employee Cathy Coder, serial number 611. Cathy earns $80,000 a year.
+        Employee employee1 = new Hourly(15, 30);
+        employee1.setName("Harry Hacker");
+        employee1.setSerialNumber(123);
+        listEmployees.add(employee1);
+
+
+        Employee employee2 = new Hourly(12.50, 20);
+        employee2.setName("Isabel Intern");
+        employee2.setSerialNumber(233);
+        listEmployees.add(employee2);
+
+        Employee employee3 = new Salaried(80000);
+        employee3.setName("Cathy Coder");
+        employee3.setSerialNumber(611);
+        listEmployees.add(employee3);
+
 
 
         //4) Using an appropriate loop to go through the Employees in the ArrayList, print
         // out a payroll report as shown in the following diagram:
+        System.out.println("Payroll Report");
+        for (Employee employee: listEmployees ) {
+            System.out.println("Employee: " + employee.getName() + " Serial: " + employee.getSerialNumber());
+            System.out.println("Gross Pay: $" + employee.getGrossPay());
+            System.out.println("Federal Withholding: $" + employee.getFedWithholding());
+            System.out.println("State Withholding: $" + employee.getStateWithholding());
+            //netPay = (hourWage * hourWage) - stateTax - federalTax;
+            double netPay = employee.getGrossPay() - employee.getStateWithholding() - employee.getFedWithholding();
+            System.out.println("Net Pay: $" + netPay+ "\n");
+
+        }
 
 
         //5) Display a goodbye message.

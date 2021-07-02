@@ -25,8 +25,20 @@ public class Salaried extends Employee{
     // from the Employee class.
     // The gross pay for a Salaried employee is calculated as annualSalary / 52.
     // Use a state tax rate of 0.07 and a federal tax rate of 0.15.
-    /*@Override
-    public */
+    @Override
+    public double getGrossPay(){
+        return this.annualSalary / 52;
+    }
+
+    @Override
+    public double getFedWithholding(){
+        return this.getGrossPay() * 0.15;
+    }
+
+    @Override
+    public double getStateWithholding(){
+        return this.getGrossPay() * 0.07;
+    }
 
 
 
