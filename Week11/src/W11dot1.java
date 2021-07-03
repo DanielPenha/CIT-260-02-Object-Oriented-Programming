@@ -125,19 +125,19 @@ public class W11dot1 {
             System.out.println("Employee: " + employee.getName() + " Serial: "
                     + employee.getSerialNumber());
             //System.out.println("Gross Pay: $" + employee.getGrossPay());
-            System.out.printf("Gross Pay: $%.2f\n", employee.getGrossPay());
+            System.out.printf("Gross Pay: $%,.2f\n", employee.getGrossPay());
 
             //System.out.println("Federal Withholding: $" + employee.getFedWithholding());
-            System.out.printf("Federal Withholding: $%.2f\n" , employee.getFedWithholding());
+            System.out.printf("Federal Withholding: $%,.2f\n" , employee.getFedWithholding());
 
             //System.out.println("State Withholding: $" + employee.getStateWithholding());
-            System.out.printf("State Withholding: $%.2f\n" , employee.getStateWithholding());
+            System.out.printf("State Withholding: $%,.2f\n" , employee.getStateWithholding());
 
             //netPay = (hourWage * hourWage) - stateTax - federalTax;
             double netPay = employee.getGrossPay() - employee.getStateWithholding()
                     - employee.getFedWithholding();
             //System.out.println("Net Pay: $" + netPay+ "\n");
-            System.out.printf("Net Pay: $%.2f\n\n" , netPay);
+            System.out.printf("Net Pay: $%,.2f\n\n" , netPay);
         }
 
         //5) Display a goodbye message.
