@@ -86,7 +86,7 @@ public class W11dot1 {
     public static void main(String[] args) {
 
         //1) Tells the user what the program does.
-        System.out.println("*******tell about it !Payroll Report");
+        System.out.println("This program shows some employees and their payroll information.\n");
 
         //2) Creates an ArrayList<Employee>.
         ArrayList<Employee> listEmployees = new ArrayList<>();
@@ -122,7 +122,8 @@ public class W11dot1 {
 
         System.out.println("Payroll Report");
         for (Employee employee: listEmployees ) {
-            System.out.println("Employee: " + employee.getName() + " Serial: " + employee.getSerialNumber());
+            System.out.println("Employee: " + employee.getName() + " Serial: "
+                    + employee.getSerialNumber());
             //System.out.println("Gross Pay: $" + employee.getGrossPay());
             System.out.printf("Gross Pay: $%.2f\n", employee.getGrossPay());
 
@@ -133,7 +134,8 @@ public class W11dot1 {
             System.out.printf("State Withholding: $%.2f\n" , employee.getStateWithholding());
 
             //netPay = (hourWage * hourWage) - stateTax - federalTax;
-            double netPay = employee.getGrossPay() - employee.getStateWithholding() - employee.getFedWithholding();
+            double netPay = employee.getGrossPay() - employee.getStateWithholding()
+                    - employee.getFedWithholding();
             //System.out.println("Net Pay: $" + netPay+ "\n");
             System.out.printf("Net Pay: $%.2f\n\n" , netPay);
         }
