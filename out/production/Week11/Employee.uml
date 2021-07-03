@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Employee</OriginalElement>
+  <nodes>
+    <node x="274.0" y="333.0">Hourly</node>
+    <node x="113.0" y="0.0">Employee</node>
+    <node x="0.0" y="350.0">Salaried</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Hourly" target="Employee" relationship="GENERALIZATION">
+      <point x="-95.5" y="-117.0" />
+      <point x="65.5" y="139.0" />
+    </edge>
+    <edge source="Salaried" target="Employee" relationship="GENERALIZATION">
+      <point x="0.0" y="-95.0" />
+      <point x="103.0" y="324.0" />
+      <point x="203.5" y="324.0" />
+      <point x="-12.5" y="139.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="240.0" y="283.5" />
+  <SelectedNodes>
+    <node>Hourly</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
