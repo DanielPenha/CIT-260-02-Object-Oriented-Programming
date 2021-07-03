@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /*
 Instructions
         Design a parent class named Employee. Your Employee class should include:
@@ -83,6 +81,7 @@ Instructions
         CIT 260 - 02
         Author@ Daniel Penha
 */
+import java.util.ArrayList;
 public class W11dot1 {
     public static void main(String[] args) {
 
@@ -92,24 +91,24 @@ public class W11dot1 {
         //2) Creates an ArrayList<Employee>.
         ArrayList<Employee> listEmployees = new ArrayList<>();
 
-
-
         //3) Create instances for the following employees and add them to the ArrayList:
         //   * Hourly employee Harry Hacker, serial number 123. Harry earns $15.00 and hour
         //   and works 30 hours a week.
-        //   * Hourly employee Isabel Intern, serial number 233. Isabel earns $12.50 and
-        //   hour and works 20 hours a week.
-        //   * Salaried employee Cathy Coder, serial number 611. Cathy earns $80,000 a year.
+
         Employee employee1 = new Hourly(15, 30);
         employee1.setName("Harry Hacker");
         employee1.setSerialNumber(123);
         listEmployees.add(employee1);
 
+        //   * Hourly employee Isabel Intern, serial number 233. Isabel earns $12.50 and
+        //   hour and works 20 hours a week.
 
         Employee employee2 = new Hourly(12.50, 20);
         employee2.setName("Isabel Intern");
         employee2.setSerialNumber(233);
         listEmployees.add(employee2);
+
+        //   * Salaried employee Cathy Coder, serial number 611. Cathy earns $80,000 a year.
 
         Employee employee3 = new Salaried(80000);
         employee3.setName("Cathy Coder");
@@ -120,20 +119,26 @@ public class W11dot1 {
 
         //4) Using an appropriate loop to go through the Employees in the ArrayList, print
         // out a payroll report as shown in the following diagram:
+
         System.out.println("Payroll Report");
         for (Employee employee: listEmployees ) {
             System.out.println("Employee: " + employee.getName() + " Serial: " + employee.getSerialNumber());
-            System.out.println("Gross Pay: $" + employee.getGrossPay());
-            System.out.println("Federal Withholding: $" + employee.getFedWithholding());
-            System.out.println("State Withholding: $" + employee.getStateWithholding());
+            //System.out.println("Gross Pay: $" + employee.getGrossPay());
+            System.out.printf("Gross Pay: $%.2f\n", employee.getGrossPay());
+
+            //System.out.println("Federal Withholding: $" + employee.getFedWithholding());
+            System.out.printf("Federal Withholding: $%.2f\n" , employee.getFedWithholding());
+
+            //System.out.println("State Withholding: $" + employee.getStateWithholding());
+            System.out.printf("State Withholding: $%.2f\n" , employee.getStateWithholding());
+
             //netPay = (hourWage * hourWage) - stateTax - federalTax;
             double netPay = employee.getGrossPay() - employee.getStateWithholding() - employee.getFedWithholding();
-            System.out.println("Net Pay: $" + netPay+ "\n");
-
+            //System.out.println("Net Pay: $" + netPay+ "\n");
+            System.out.printf("Net Pay: $%.2f\n\n" , netPay);
         }
 
-
         //5) Display a goodbye message.
-        System.out.println("\nGoodbye ...");
+        System.out.println("Goodbye ...");
     }
 }
