@@ -29,7 +29,7 @@ public class W12dot1 {
         //2) Create the following objects and store the references
         // to them in a single ArrayList.
 
-        ArrayList<Shape> shapes = new ArrayList<>();
+        ArrayList<GeometricObject> shapes = new ArrayList<>();
 
         //2.1) A Circle object with a radius of 10 inches and an identifier of 156.
 
@@ -43,17 +43,16 @@ public class W12dot1 {
         // and an identifier of 212.
 
         shapes.add(new Triangle( 212 , 4 , 3 ) );
-        Shape triangle1 = new Triangle( 666,4,3 );
 
         //3) Iterate through the ArrayList and display the area of the three different shape
         // objects you have created. Your output should look like this:
 
         System.out.println("Identifier \tArea");
-        for (Shape shape : shapes){
+        for (GeometricObject shape : shapes){
             shape.display();
         }
 
         //4) Display a goodbye message.
-        System.out.println("Goodbye ...");
+        System.out.println("\nGoodbye ...");
     }
 }

@@ -1,4 +1,4 @@
-public class Triangle extends Shape {
+public class Triangle extends GeometricObject {
     //Attribute
     private double base;
     private double height;
@@ -41,6 +41,7 @@ public class Triangle extends Shape {
 
     https://www.omnicalculator.com/math/triangle-area
     */
+    @Override
     public double getArea(){
         return ( this.base * this.height ) / 2;
     }

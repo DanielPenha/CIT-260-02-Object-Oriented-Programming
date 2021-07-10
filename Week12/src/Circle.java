@@ -1,4 +1,4 @@
-public class Circle extends Shape {
+public class Circle extends GeometricObject {
     //Attribute
     private double radius;
 
@@ -26,6 +26,7 @@ public class Circle extends Shape {
     //https://www.omnicalculator.com/math/circumference
 
     // Area of a Circle
+    @Override
     public double getArea(){
         //return Math.PI * (this.getRadius() * this.getRadius());
         return Math.PI * Math.pow(this.getRadius(),2);

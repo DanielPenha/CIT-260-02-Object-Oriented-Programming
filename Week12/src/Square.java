@@ -1,4 +1,4 @@
-public class Square extends Shape {
+public class Square extends GeometricObject {
     //Attribute
     private double side;
 
@@ -24,6 +24,7 @@ public class Square extends Shape {
     https://www.omnicalculator.com/math/square
     */
 
+    @Override
     public double getArea(){
         //return this.getSide() * this.getSide();
         return Math.pow( this.getSide() , 2 );

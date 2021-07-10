@@ -1,11 +1,11 @@
-public abstract class Shape {
+public abstract class GeometricObject {
     //Attribute
     private int id;
 
     //Constructor
     //A no-arg constructor that initializes the Shape
-    public Shape(int id){
-        this.id = this.id;
+    public GeometricObject(int id){
+        this.id = id;
     }
 
     //GETTERS & SETTERS
