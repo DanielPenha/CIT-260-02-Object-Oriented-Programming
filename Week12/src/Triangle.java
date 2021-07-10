@@ -4,6 +4,15 @@ public class Triangle extends GeometricObject {
     private double height;
 
     //Constructor
+    //A no-arg constructor that initializes
+    public Triangle(){
+        super();
+        this.base = base;
+        this.height = height;
+    }
+
+    //A parameterized constructor that initializes Triangle using arguments
+    // passed to the constructor.
     public Triangle( int id, double base, double height){
         super(id);
         this.base = base;

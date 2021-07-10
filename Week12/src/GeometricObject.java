@@ -4,6 +4,12 @@ public abstract class GeometricObject {
 
     //Constructor
     //A no-arg constructor that initializes the Shape
+    public GeometricObject(){
+        this.id = id;
+    }
+
+    //A parameterized constructor that initializes id using arguments
+    //passed to the constructor.
     public GeometricObject(int id){
         this.id = id;
     }

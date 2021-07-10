@@ -3,6 +3,14 @@ public class Circle extends GeometricObject {
     private double radius;
 
     //Constructor
+    //A no-arg constructor that initializes
+    public Circle(){
+        super();
+        this.radius = radius;
+
+    }
+    //A parameterized constructor that initializes circle using arguments
+    // passed to the constructor.
     public Circle( int id , double radius){
         super(id);
         this.radius = radius;

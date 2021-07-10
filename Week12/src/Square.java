@@ -3,6 +3,14 @@ public class Square extends GeometricObject {
     private double side;
 
     //Constructor
+    //A no-arg constructor that initializes
+    public Square(){
+        super();
+        this.side = side;
+    }
+
+    //A parameterized constructor that initializes Square using arguments
+    // passed to the constructor.
     public Square( int id , double side){
         super(id);
         this.side = side;
