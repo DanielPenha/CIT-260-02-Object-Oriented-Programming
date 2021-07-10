@@ -30,7 +30,7 @@ public abstract class GeometricObject {
 
     // Shape
     public void display(){
-        System.out.printf("%d %14.2f sq. inches\n", this.getId(), this.getArea());
+        System.out.printf("%-10d %10.2f %s \n", this.getId(), this.getArea() , "sq. inches");
 
     }
 

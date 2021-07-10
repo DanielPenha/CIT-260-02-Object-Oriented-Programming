@@ -47,7 +47,7 @@ public class W12dot1 {
         //3) Iterate through the ArrayList and display the area of the three different shape
         // objects you have created. Your output should look like this:
 
-        System.out.println("Identifier \tArea");
+        System.out.printf("%10s %10s\n", "Identifier" , "Area" );
         for (GeometricObject shape : shapes){
             shape.display();
         }
