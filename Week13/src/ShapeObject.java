@@ -1,17 +1,19 @@
 public abstract class ShapeObject {
     //Attribute
     private int id;
+    private Point point;
 
     //Constructor
     //A no-arg constructor that initializes the Shape
     public ShapeObject(){
-        this.id = id;
+        this.id = 0;
     }
 
     //A parameterized constructor that initializes id using arguments
     //passed to the constructor.
-    public ShapeObject(int id){
+    public ShapeObject(int id , Point point){
         this.id = id;
+        this.point = point;
     }
 
     //GETTERS & SETTERS
@@ -26,11 +28,21 @@ public abstract class ShapeObject {
         this.id = id;
     }
 
+    //Getter Point
+    public Point getPoint() {
+        return point;
+    }
+
+    //Setter Point
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
     // Method
 
     // Shape
     public void display(){
-        System.out.printf("%-10d %10.2f %s \n", this.getId(), this.getArea() , "sq. inches");
+        System.out.printf("%s %10d %10s %s %s \n",this.getClass().getSimpleName(), this.getId(), this.getPoint().getX(), this.getPoint().getY() ,this.getArea());
 
     }
 

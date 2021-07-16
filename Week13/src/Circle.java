@@ -6,14 +6,16 @@ public class Circle extends ShapeObject{
     //A no-arg constructor that initializes
     public Circle(){
         super();
-        this.radius = radius;
+        this.radius = 0;
 
     }
     //A parameterized constructor that initializes circle using arguments
     // passed to the constructor.
-    public Circle( int id , double radius){
-        super(id);
+    public Circle( int id , double radius , Point point) {
+        super();
+        this.setId(id);
         this.radius = radius;
+        this.setPoint(point);
     }
 
     //GETTERS & SETTERS

@@ -7,16 +7,18 @@ public class RightTriangle extends ShapeObject{
     //A no-arg constructor that initializes
     public RightTriangle(){
         super();
-        this.base = base;
-        this.height = height;
+        this.base = 0;
+        this.height = 0;
     }
 
     //A parameterized constructor that initializes Triangle using arguments
     // passed to the constructor.
-    public RightTriangle( int id, double base, double height){
-        super(id);
+    public RightTriangle( int id, double base, double height, Point point){
+        super();
+        this.setId(id);
         this.base = base;
         this.height = height;
+        this.setPoint(point);
     }
 
     //GETTERS & SETTERS

@@ -6,14 +6,16 @@ public class Square extends ShapeObject{
     //A no-arg constructor that initializes
     public Square(){
         super();
-        this.side = side;
+        this.side = 0;
     }
 
     //A parameterized constructor that initializes Square using arguments
     // passed to the constructor.
-    public Square( int id , double side){
-        super(id);
+    public Square( int id , double side, Point point){
+        super();
+        this.setId(id);
         this.side = side;
+        this.setPoint(point);
     }
 
     //GETTERS & SETTERS
