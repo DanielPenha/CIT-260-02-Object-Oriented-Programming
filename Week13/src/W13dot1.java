@@ -25,6 +25,7 @@ public class W13dot1 {
         //1) Tell the user what the program does.
         System.out.println("This program creates a series of shapes then " +
                 "shows their ID with their area.\n");
+        System.out.println("Also it will write those shapes to a file, read them from a file.\n");
 
         //2) Create the following objects and store the references to them in a single ArrayList
 
