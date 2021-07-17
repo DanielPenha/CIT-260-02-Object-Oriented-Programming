@@ -42,7 +42,7 @@ public abstract class ShapeObject {
 
     // Shape
     public void display(){
-        System.out.printf("%s %10d %10s %s %s \n",this.getClass().getSimpleName(), this.getId(), this.getPoint().getX(), this.getPoint().getY() ,this.getArea());
+        System.out.printf("%-17s %d      (%s,%s) %10.2f \n",this.getClass().getSimpleName(), this.getId(), (int) this.getPoint().getX(), (int) this.getPoint().getY() ,this.getArea());
 
     }
 

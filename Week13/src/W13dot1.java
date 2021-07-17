@@ -56,7 +56,7 @@ public class W13dot1 {
         //5) Using the data you just read from the file, display a report that
         // looks like the following:
 
-        System.out.printf("%s %10s %10s %10s\n", "Shape" , "ID" , "Position" , "Area" );
+        System.out.printf("%s %15s %10s %8s\n", "Shape" , "ID" , "Position" , "Area" );
         for (ShapeObject shape : shapes){
             shape.display();
         }
