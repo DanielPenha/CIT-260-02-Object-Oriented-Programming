@@ -20,6 +20,8 @@ Triangle  212  (3,3)       6.00
 
 */
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,8 +34,15 @@ public class W13dot1 {
 
         //2) Create the following objects and store the references to them in a single ArrayList
 
-        ArrayList<ShapeObject> shapes = getShapes("C:\\Users\\Daniel Penha\\IdeaProjects\\CIT-260-02-Object-Oriented-Programming\\Week13\\src\\text_file.csv"); //new ArrayList<>();
+        /*Err on the path
+        ArrayList<ShapeObject> shapes = getShapes("C:\\Users\\Daniel Penha\\IdeaProjects\\CIT-260-02-Object-Oriented-Programming\\Week13\\src\\text_file.csv"); */
 
+        //new ArrayList<>();
+
+        //Read the data from the file back into your program. Handle any IO Exceptions.
+        ArrayList<ShapeObject> shapes = getShapes("Week13/src/text_file.csv"); //new ArrayList<>();
+/*
+        No long needed
         //2.1) A Circle object at point (1,1) with a radius of 10 inches and an identifier of 156
 
 //        shapes.add(new Circle( 156 , 10, new Point(1 ,1) ) );
@@ -54,17 +63,25 @@ public class W13dot1 {
 
 
         //5) Using the data you just read from the file, display a report that
-        // looks like the following:
+        // looks like the following:*/
 
-        System.out.printf("%s %15s %10s %8s\n", "Shape" , "ID" , "Position" , "Area" );
-        for (ShapeObject shape : shapes){
-            shape.display();
+        //Create a text file and write the data for each object to the file. Handle any IO exceptions.
+        try (PrintWriter data = new PrintWriter("Week13/creat_file.txt")){
+
+            data.format("%s %15s %10s %8s\n", "Shape" , "ID" , "Position" , "Area" );
+            for (ShapeObject shape : shapes){
+                shape.display();
+                data.format("%-17s %d      (%s,%s) %10.2f \n",shape.getClass().getSimpleName(), shape.getId(), (int) shape.getPoint().getX(), (int) shape.getPoint().getY() , shape.getArea());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
         //6) Display a goodbye message.
         System.out.println("\nGoodbye ...");
     }
 
+    //Build the exception
     public static ArrayList<ShapeObject> getShapes( String filePath) {
         ArrayList<ShapeObject> shapes = new ArrayList<>();
         try {

@@ -41,9 +41,14 @@ public abstract class ShapeObject {
     // Method
 
     // Shape
-    public void display(){
+    public boolean display(){
         System.out.printf("%-17s %d      (%s,%s) %10.2f \n",this.getClass().getSimpleName(), this.getId(), (int) this.getPoint().getX(), (int) this.getPoint().getY() ,this.getArea());
 
+        return false;
+    }
+
+    public String toString(){
+        return this.getClass().getSimpleName()+" "+this.getId()+" "+(int) this.getPoint().getX()+" "+(int) this.getPoint().getY()+" "+this.getArea();
     }
 
     //Area

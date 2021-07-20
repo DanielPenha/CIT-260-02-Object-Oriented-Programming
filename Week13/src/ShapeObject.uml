@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ShapeObject</OriginalElement>
+  <nodes>
+    <node x="284.0" y="361.0">Circle</node>
+    <node x="0.0" y="328.0">RightTriangle</node>
+    <node x="287.0" y="0.0">ShapeObject</node>
+    <node x="683.0" y="33.0">Point</node>
+    <node x="485.0" y="361.0">Square</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Square" target="ShapeObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-84.0" />
+      <point x="578.5" y="303.0" />
+      <point x="374.5" y="303.0" />
+      <point x="0.0" y="139.0" />
+    </edge>
+    <edge source="Circle" target="ShapeObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-84.0" />
+      <point x="0.0" y="139.0" />
+    </edge>
+    <edge source="RightTriangle" target="ShapeObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-117.0" />
+      <point x="132.0" y="303.0" />
+      <point x="374.5" y="303.0" />
+      <point x="0.0" y="139.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="461.5" y="281.0" />
+  <SelectedNodes>
+    <node>Point</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
